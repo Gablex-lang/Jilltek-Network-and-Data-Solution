@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JillTek – Data and Network Solution</title>
+  <meta name="description" content="JillTek brings fast and reliable internet to Mahinog, Camiguin. Affordable plans, professional installation, reliable service." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- FIBER OPTIC CANVAS BACKGROUND -->
+<canvas id="fiber-canvas"></canvas>
+
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+<header id="header">
+  <a href="#hero" class="logo-wrap">
+    <div class="logo-text">
+      <div class="brand">Jill<em>Tek</em></div>
+      <div class="tagline">Data &amp; Network Solution</div>
+    </div>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#hero" class="active">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="#request">Request</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#login" class="btn-login">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           style="width:13px;height:13px">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+        <polyline points="10 17 15 12 10 7"/>
+        <line x1="15" y1="12" x2="3" y2="12"/>
+      </svg>
+      Login
+    </a>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#hero">Home</a>
+  <a href="#plans">Plans</a>
+  <a href="#request">Request</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact Us</a>
+  <a href="#login">Login</a>
+</nav>
+
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Serving Mahinog, Camiguin Island
+      </div>
+
+      <h1 class="hero-title">
+        Fast &amp; Reliable
+        <span class="line2">WiFi Installation</span>
+      </h1>
+
+      <p class="hero-desc">
+        JillTek brings high-speed internet connectivity to homes and businesses in Mahinog.
+        Affordable plans, professional installation, and reliable 24/7 service.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#request" class="btn-primary">
+          Request Installation
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+               style="width:16px;height:16px">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="#plans" class="btn-secondary">
+          View Plans
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               style="width:16px;height:16px">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-value">20–100</div><div class="stat-label">Mbps Speed</div></div>
+        <div class="stat-item"><div class="stat-value">24/7</div><div class="stat-label">Support</div></div>
+        <div class="stat-item"><div class="stat-value">₱1K+</div><div class="stat-label">Starting Price</div></div>
+      </div>
+    </div>
+
+    <!-- Animated network graphic -->
+    <div class="hero-right" aria-hidden="true">
+      <div class="network-graphic">
+        <canvas class="net-canvas" id="netCanvas"></canvas>
+        <div class="center-node">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <circle cx="12" cy="20" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     PLANS
+     ======================================================= -->
+<section id="plans" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-badge">Internet Plans</div>
+      <h2 class="section-title">Choose Your Perfect Plan</h2>
+      <p class="section-sub">Affordable high-speed internet for every need. All plans include free installation and a WiFi router.</p>
+    </div>
+
+    <div class="plans-grid">
+
+      <!-- 20 Mbps -->
+      <div class="plan-card reveal">
+        <div class="plan-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+        </div>
+        <div><div class="plan-speed">20 <span>Mbps</span></div><div class="plan-price">₱1,000 <small>/month</small></div></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>20 Mbps Download Speed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Router Setup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Basic Support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Browsing &amp; Social Media</li>
+        </ul>
+        <button class="btn-plan" onclick="pickPlan('Basic – 20 Mbps / ₱1,000')">Request Plan</button>
+      </div>
+
+      <!-- 35 Mbps -->
+      <div class="plan-card reveal">
+        <div class="plan-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div><div class="plan-speed">35 <span>Mbps</span></div><div class="plan-price">₱1,300 <small>/month</small></div></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>35 Mbps Download Speed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Router Setup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority Support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Streaming &amp; Work from Home</li>
+        </ul>
+        <button class="btn-plan" onclick="pickPlan('Standard – 35 Mbps / ₱1,300')">Request Plan</button>
+      </div>
+
+      <!-- 50 Mbps — FEATURED -->
+      <div class="plan-card featured reveal">
+        <div class="plan-pop-badge">Most Popular</div>
+        <div class="plan-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div><div class="plan-speed">50 <span>Mbps</span></div><div class="plan-price">₱1,500 <small>/month</small></div></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>50 Mbps Download Speed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free Premium Router</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>24/7 Priority Support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Gaming &amp; Business Use</li>
+        </ul>
+        <button class="btn-plan" onclick="pickPlan('Pro – 50 Mbps / ₱1,500')">Request Plan</button>
+      </div>
+
+      <!-- 80 Mbps -->
+      <div class="plan-card reveal">
+        <div class="plan-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div><div class="plan-speed">80 <span>Mbps</span></div><div class="plan-price">₱1,800 <small>/month</small></div></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>80 Mbps Download Speed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Premium Router</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>24/7 Priority Support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Multiple Devices</li>
+        </ul>
+        <button class="btn-plan" onclick="pickPlan('Business – 80 Mbps / ₱1,800')">Request Plan</button>
+      </div>
+
+      <!-- 100 Mbps -->
+      <div class="plan-card reveal">
+        <div class="plan-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div><div class="plan-speed">100 <span>Mbps</span></div><div class="plan-price">₱2,100 <small>/month</small></div></div>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>100 Mbps Download Speed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Data</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enterprise Router</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated 24/7 Support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enterprise &amp; Heavy Use</li>
+        </ul>
+        <button class="btn-plan" onclick="pickPlan('Enterprise – 100 Mbps / ₱2,100')">Request Plan</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     REQUEST INSTALLATION (with OTP Blueprint)
+     ======================================================= -->
+<section id="request" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-badge">Get Connected</div>
+      <h2 class="section-title">Request Installation</h2>
+      <p class="section-sub">Fill out the form and our team will contact you within 24 hours to schedule your installation.</p>
+    </div>
+
+    <div class="request-grid">
+      <!-- Left info -->
+      <div class="request-info reveal">
+        <h3>How It Works</h3>
+        <p>Getting connected with JillTek is fast and easy. Submit your request, verify your number via OTP, and we'll take care of the rest.</p>
+
+        <div class="request-steps">
+          <div class="req-step">
+            <div class="req-step-num">01</div>
+            <div class="req-step-info">
+              <h5>Fill Out the Form</h5>
+              <p>Provide your name, address, and your preferred internet plan.</p>
+            </div>
+          </div>
+          <div class="req-step">
+            <div class="req-step-num">02</div>
+            <div class="req-step-info">
+              <h5>Verify via OTP</h5>
+              <p>We'll send a one-time PIN to your mobile number via SMS to confirm your request.</p>
+            </div>
+          </div>
+          <div class="req-step">
+            <div class="req-step-num">03</div>
+            <div class="req-step-info">
+              <h5>Schedule Installation</h5>
+              <p>Our technician will visit your location and set up your connection.</p>
+            </div>
+          </div>
+          <div class="req-step">
+            <div class="req-step-num">04</div>
+            <div class="req-step-info">
+              <h5>Get Connected!</h5>
+              <p>Enjoy fast, reliable internet from JillTek starting on installation day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right form -->
+      <div class="form-card reveal">
+        <div id="formSelectedPlan" class="form-selected-plan">
+          Selected Plan: <strong id="selectedPlanText"></strong>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Juan" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Dela Cruz" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" placeholder="09XX XXX XXXX" id="mobileInput" />
+        </div>
+
+        <div class="form-group">
+          <label>Address in Mahinog</label>
+          <input type="text" placeholder="Barangay / Street" />
+        </div>
+
+        <div class="form-group">
+          <label>Select Plan</label>
+          <select id="planSelect">
+            <option value="">-- Choose a plan --</option>
+            <option>Basic – 20 Mbps / ₱1,000</option>
+            <option>Standard – 35 Mbps / ₱1,300</option>
+            <option>Pro – 50 Mbps / ₱1,500</option>
+            <option>Business – 80 Mbps / ₱1,800</option>
+            <option>Enterprise – 100 Mbps / ₱2,100</option>
+          </select>
+        </div>
+
+        <!-- ── OTP BLUEPRINT BLOCK ── -->
+        <div class="otp-block">
+          <div class="otp-header">
+            <div class="otp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+              SMS OTP Verification
+            </div>
+            <span class="badge-api">SMS API — Coming Soon</span>
+          </div>
+
+          <div class="otp-row">
+            <div class="otp-input-wrap">
+              <label>Enter OTP Code</label>
+              <input type="text" placeholder="● ● ● ● ● ●" maxlength="6" disabled />
+            </div>
+            <button class="btn-send-otp" disabled>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Send OTP
+            </button>
+          </div>
+
+          <div class="otp-hint">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <span>A 6-digit OTP will be sent to your mobile number via SMS. This requires integration with an <strong>SMS API</strong> (e.g. Semaphore, ITEXMO, or Globe Labs). Feature is designed — activation pending API key setup.</span>
+          </div>
+        </div>
+        <!-- ── END OTP BLOCK ── -->
+
+        <button class="btn-primary" onclick="submitRequest()" style="width:100%;justify-content:center;font-size:0.92rem;padding:14px;">
+          Submit Request
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+               style="width:16px;height:16px">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+        <p style="text-align:center;font-size:0.73rem;color:var(--text-muted);margin-top:0.9rem;">
+          Frontend blueprint only — backend &amp; SMS API integration coming next phase.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     OTHER SERVICES
+     ======================================================= -->
+<section id="services" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-badge">In-Store Services</div>
+      <h2 class="section-title">More Than Just Internet</h2>
+      <p class="section-sub">Visit us at Mahinog Business Center for a wide range of everyday services.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><span class="service-emoji">🧴</span><div class="service-name">Skincare Products</div><div class="service-desc">Quality skincare items available in-store</div></div>
+      <div class="service-card reveal"><span class="service-emoji">📱</span><div class="service-name">Cellphone Repair</div><div class="service-desc">Screen, battery &amp; general device repairs</div></div>
+      <div class="service-card reveal"><span class="service-emoji">📄</span><div class="service-name">Lamination</div><div class="service-desc">Document and ID lamination service</div></div>
+      <div class="service-card reveal"><span class="service-emoji">📋</span><div class="service-name">Xerox / Photocopy</div><div class="service-desc">Fast and affordable photocopying</div></div>
+      <div class="service-card reveal"><span class="service-emoji">🖨️</span><div class="service-name">Printing</div><div class="service-desc">Documents and photo printing</div></div>
+      <div class="service-card reveal"><span class="service-emoji">🎨</span><div class="service-name">Tarpaulin Printing</div><div class="service-desc">Custom tarps for events &amp; business</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     ABOUT
+     ======================================================= -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div>
+          <div class="section-badge" style="text-align:left;display:inline-block;">About JillTek</div>
+          <h2 class="section-title" style="text-align:left;margin-top:0.8rem;">Connecting Mahinog<br>to the World</h2>
+        </div>
+        <p>JillTek is a locally-owned internet service provider dedicated to bringing fast, reliable, and affordable connectivity to the residents and businesses of Mahinog, Camiguin. We believe everyone deserves quality internet access.</p>
+        <p>Beyond internet, we operate a full-service shop at Mahinog Business Center — offering cellphone repairs, printing services, lamination, xerox, tarpaulin printing, and skincare products. We are your one-stop tech and service hub in Mahinog.</p>
+
+        <div class="about-highlights">
+          <div class="highlight-card"><div class="h-value">100%</div><div class="h-label">Locally Owned</div></div>
+          <div class="highlight-card"><div class="h-value">24/7</div><div class="h-label">Support</div></div>
+          <div class="highlight-card"><div class="h-value">5</div><div class="h-label">Internet Plans</div></div>
+          <div class="highlight-card"><div class="h-value">6+</div><div class="h-label">Store Services</div></div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="feature-tile"><div class="tile-icon">⚡</div><h4>High Speed Plans</h4><p>From 20 up to 100 Mbps — plans for every household and business need.</p></div>
+        <div class="feature-tile"><div class="tile-icon">🛡️</div><h4>Reliable Network</h4><p>Stable connections with minimal downtime backed by our local support team.</p></div>
+        <div class="feature-tile"><div class="tile-icon">💸</div><h4>Affordable Pricing</h4><p>Starting at ₱1,000/month with free installation and WiFi router included.</p></div>
+        <div class="feature-tile"><div class="tile-icon">🏪</div><h4>Full-Service Shop</h4><p>Repairs, printing, lamination &amp; more — all under one roof at Mahinog Business Center.</p></div>
+      </div>
+    </div>
+
+    <!-- All Services — full width below the two columns -->
+    <div class="about-services-full reveal">
+      <div class="about-services-header">
+        <div class="about-services-line"></div>
+        <h4>All Services We Offer</h4>
+        <div class="about-services-line"></div>
+      </div>
+      <div class="about-services-cards">
+        <div class="asc"><span>📡</span><span>Internet Installation</span></div>
+        <div class="asc"><span>📱</span><span>Cellphone Repair</span></div>
+        <div class="asc"><span>🖨️</span><span>Printing</span></div>
+        <div class="asc"><span>📋</span><span>Xerox &amp; Photocopy</span></div>
+        <div class="asc"><span>📄</span><span>Lamination</span></div>
+        <div class="asc"><span>🎨</span><span>Tarpaulin Printing</span></div>
+        <div class="asc"><span>🧴</span><span>Skincare Products</span></div>
+        <div class="asc"><span>🔧</span><span>Network Solutions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     CONTACT & MAP
+     ======================================================= -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-badge">Find Us</div>
+      <h2 class="section-title">Contact &amp; Location</h2>
+      <p class="section-sub">Visit our store or reach out — we're always ready to help you get connected.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Store Address</h4>
+            <p>Mahinog Business Center<br>Mahinog, Camiguin, Philippines</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18.92z"/></svg>
+          </div>
+          <div>
+            <h4>Mobile Number</h4>
+            <p><a href="tel:+639305907277">0930 590 7277</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div>
+            <h4>Facebook Page</h4>
+            <p><a href="https://facebook.com/rejilljilltekmagusar" target="_blank" rel="noopener">Rejill JillTek Mag-usara</a><br>
+            <span style="font-size:0.8rem;color:var(--text-muted);">Message us for inquiries &amp; support</span></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday – Saturday: 8:00 AM – 6:00 PM<br>
+            <span style="font-size:0.82rem;color:var(--text-muted);">Sunday: By appointment</span></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.18766803769057!2d124.78762127459048!3d9.154228692514579!2m3!1f0!2f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x330069001ba42601%3A0xb3e54f4b89e78c46!2sMahinog%20Business%20Center!5e0!3m2!1sen!2sph!4v1772981248900!5m2!1sen!2sph"
+          allowfullscreen="" loading="lazy"
+          title="JillTek – Mahinog Business Center">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="logo-wrap">
+          <div class="logo-text">
+            <div class="brand">Jill<em>Tek</em></div>
+            <div class="tagline">Data &amp; Network Solution</div>
+          </div>
+        </a>
+        <p>Bringing fast, reliable, and affordable internet to Mahinog, Camiguin. Your local partner for connectivity and everyday services.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#request">Request Installation</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#plans">Internet Plans</a></li>
+          <li><a href="#services">Cellphone Repair</a></li>
+          <li><a href="#services">Printing &amp; Xerox</a></li>
+          <li><a href="#services">Tarpaulin Printing</a></li>
+          <li><a href="#services">Lamination</a></li>
+          <li><a href="#services">Skincare Products</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> <span>JillTek</span>. All rights reserved. Mahinog Business Center, Camiguin.</p>
+      <p>📞 <span>0930 590 7277</span> &nbsp;|&nbsp; 📘 Rejill JillTek Mag-usara</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+     ======================================================= -->
+<script>
+/* ---- Year ---- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---- Scrolled header ---- */
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+});
+
+/* ---- Mobile nav ---- */
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileNav');
+ham.addEventListener('click', () => {
+  const open = mob.classList.toggle('open');
+  ham.classList.toggle('open', open);
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mob.classList.remove('open'); ham.classList.remove('open');
+}));
+
+/* ---- Active nav ---- */
+const navLinks = document.querySelectorAll('.nav-links a');
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting)
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+  });
+}, { rootMargin: '-35% 0px -55% 0px' });
+document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
+
+/* ---- Reveal on scroll ---- */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const siblings = [...entry.target.parentElement.children].filter(c => c.classList.contains('reveal'));
+    const idx = siblings.indexOf(entry.target);
+    setTimeout(() => entry.target.classList.add('visible'), idx * 90);
+    ro.unobserve(entry.target);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+/* ---- Pick plan from cards ---- */
+function pickPlan(name) {
+  document.getElementById('planSelect').value = name;
+  document.getElementById('selectedPlanText').textContent = name;
+  document.getElementById('formSelectedPlan').style.display = 'block';
+  document.getElementById('request').scrollIntoView({ behavior: 'smooth' });
+}
+
+/* ---- Submit (frontend only) ---- */
+function submitRequest() {
+  const plan = document.getElementById('planSelect').value;
+  if (!plan) { alert('Please select a plan.'); return; }
+  alert('Thank you for your interest in JillTek!\n\nYour request has been noted.\nOur team will reach out to you within 24 hours.\n\n(SMS OTP & backend coming in the next phase.)');
+}
+
+/* ==========================================================
+   LIGHTWEIGHT GLOWING FIBER BACKGROUND
+   ========================================================== */
+(function () {
+  const canvas = document.getElementById('fiber-canvas');
+  const ctx    = canvas.getContext('2d');
+  let W, H, fibers = [], particles = [];
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    init();
+  }
+
+  function Fiber() { this.reset(true); }
+  Fiber.prototype.reset = function (stagger) {
+    this.x   = Math.random() * W;
+    this.y   = Math.random() * H;
+    this.len = 180 + Math.random() * 300;
+    this.ang = Math.random() * Math.PI * 2;
+    this.w   = 0.6 + Math.random() * 1.3;
+    this.hue = Math.random() > 0.6 ? 210 + Math.random() * 30 : 165 + Math.random() * 20;
+    this.sat = 80 + Math.random() * 20;
+    this.lit = 45 + Math.random() * 25;
+    this.a   = 0.12 + Math.random() * 0.28;
+    this.pOff= Math.random() * Math.PI * 2;
+    this.cpx = Math.random() * W;
+    this.cpy = Math.random() * H;
+    this.cvx = (Math.random() - 0.5) * 0.35;
+    this.cvy = (Math.random() - 0.5) * 0.35;
+    this.life= stagger ? Math.floor(Math.random() * 200) : 0;
+    this.max = 200 + Math.random() * 220;
+  };
+  Fiber.prototype.update = function () {
+    this.life++;
+    this.cpx += this.cvx;
+    this.cpy += this.cvy;
+    this.ang += (Math.random() - 0.5) * 0.012;
+    if (this.life > this.max) this.reset(false);
+  };
+  Fiber.prototype.draw = function (t) {
+    const fi = Math.min(1, this.life / 35);
+    const fo = Math.min(1, (this.max - this.life) / 35);
+    const p  = 0.7 + 0.3 * Math.sin(t * 0.002 + this.pOff);
+    const a  = this.a * fi * fo * p;
+    const ex = this.x + Math.cos(this.ang) * this.len;
+    const ey = this.y + Math.sin(this.ang) * this.len;
+    const g  = ctx.createLinearGradient(this.x, this.y, ex, ey);
+    const h  = this.hue, s = this.sat, l = this.lit;
+    g.addColorStop(0,   `hsla(${h},${s}%,${l}%,0)`);
+    g.addColorStop(0.2, `hsla(${h},${s}%,${l}%,${a})`);
+    g.addColorStop(0.5, `hsla(${h},${s}%,${l+15}%,${a*1.4})`);
+    g.addColorStop(0.8, `hsla(${h},${s}%,${l}%,${a})`);
+    g.addColorStop(1,   `hsla(${h},${s}%,${l}%,0)`);
+    ctx.beginPath();
+    ctx.moveTo(this.x, this.y);
+    ctx.quadraticCurveTo(this.cpx, this.cpy, ex, ey);
+    ctx.strokeStyle = g;
+    ctx.lineWidth   = this.w;
+    ctx.lineCap     = 'round';
+    ctx.shadowColor = `hsla(${h},100%,70%,${a * 0.5})`;
+    ctx.shadowBlur  = 7;
+    ctx.stroke();
+    ctx.shadowBlur  = 0;
+  };
+
+  function Particle() { this.reset(); }
+  Particle.prototype.reset = function () {
+    this.x  = Math.random() * W;
+    this.y  = Math.random() * H;
+    this.r  = 0.8 + Math.random() * 1.8;
+    this.vx = (Math.random() - 0.5) * 0.22;
+    this.vy = (Math.random() - 0.5) * 0.22;
+    this.hue= Math.random() > 0.55 ? 170 + Math.random() * 20 : 210 + Math.random() * 30;
+    this.a  = 0.18 + Math.random() * 0.4;
+    this.pOff = Math.random() * Math.PI * 2;
+  };
+  Particle.prototype.update = function () {
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0) this.x = W; if (this.x > W) this.x = 0;
+    if (this.y < 0) this.y = H; if (this.y > H) this.y = 0;
+  };
+  Particle.prototype.draw = function (t) {
+    const p = 0.5 + 0.5 * Math.sin(t * 0.003 + this.pOff);
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle   = `hsla(${this.hue},90%,70%,${this.a * p})`;
+    ctx.shadowColor = `hsla(${this.hue},100%,70%,0.35)`;
+    ctx.shadowBlur  = 5;
+    ctx.fill();
+    ctx.shadowBlur  = 0;
+  };
+
+  function init() {
+    fibers    = Array.from({ length: 16 }, () => new Fiber());
+    particles = Array.from({ length: 45 }, () => new Particle());
+  }
+
+  let t = 0;
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    fibers.forEach(f => { f.update(); f.draw(t); });
+    particles.forEach(p => { p.update(); p.draw(t); });
+    t++;
+    requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  loop();
+})();
+
+/* ==========================================================
+   NETWORK GLOBE CANVAS (hero right)
+   ========================================================== */
+(function() {
+  const canvas = document.getElementById('netCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const SIZE = 340;
+  canvas.width = SIZE; canvas.height = SIZE;
+  const cx = SIZE / 2, cy = SIZE / 2;
+
+  const nodes = Array.from({ length: 10 }, (_, i) => {
+    const ang = (i / 10) * Math.PI * 2;
+    const r = 90 + (i % 2 === 0 ? 30 : 0);
+    return {
+      x: cx + Math.cos(ang) * r,
+      y: cy + Math.sin(ang) * r,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: 3 + Math.random() * 3,
+      pulseOffset: Math.random() * Math.PI * 2,
+    };
+  });
+
+  // Add a few inner nodes
+  for (let i = 0; i < 5; i++) {
+    const ang = Math.random() * Math.PI * 2;
+    const r   = 40 + Math.random() * 50;
+    nodes.push({ x: cx + Math.cos(ang)*r, y: cy + Math.sin(ang)*r, vx:(Math.random()-.5)*.2, vy:(Math.random()-.5)*.2, r:2+Math.random()*2, pulseOffset:Math.random()*Math.PI*2 });
+  }
+
+  let t = 0;
+  function loop() {
+    ctx.clearRect(0, 0, SIZE, SIZE);
+
+    // Update nodes
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy;
+      const dx = n.x - cx, dy = n.y - cy;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist > 155) { n.vx *= -1; n.vy *= -1; }
+    });
+
+    // Draw edges
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const d  = Math.sqrt(dx*dx + dy*dy);
+        if (d < 130) {
+          const alpha = (1 - d / 130) * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(0,229,184,${alpha})`;
+          ctx.lineWidth   = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw nodes
+    nodes.forEach(n => {
+      const pulse = 0.6 + 0.4 * Math.sin(t * 0.04 + n.pulseOffset);
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r * pulse, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0,229,184,${0.7 * pulse})`;
+      ctx.shadowColor = 'rgba(0,229,184,0.5)';
+      ctx.shadowBlur  = 8;
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+    });
+
+    t++;
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+
+</script>
+</body>
+</html>
